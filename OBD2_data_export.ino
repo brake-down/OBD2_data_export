@@ -53,7 +53,7 @@ bool getSpeed(int *s)
     sendPid(PID_VEHICLE_SPEED);
     unsigned long __timeout = millis();
 
-    while (millis() - __timeout < 1000) {
+    while (millis() - __timeout < 50) {
         unsigned char len = 0;
         unsigned char buf[8];
         unsigned long canId;
@@ -76,7 +76,7 @@ bool getRPM(int *rpm)
     sendPid(PID_ENGIN_PRM);
     unsigned long __timeout = millis();
 
-    while (millis() - __timeout < 1000)
+    while (millis() - __timeout < 50)
     {
         unsigned char len = 0;
         unsigned char buf[8];
@@ -103,7 +103,7 @@ bool getAccelPedalPos(float *pos)
     sendPid(PID_ACCEL_PEDAL_POS);
     unsigned long __timeout = millis();
 
-    while (millis() - __timeout < 1000)
+    while (millis() - __timeout < 50)
     {
         unsigned char len = 0;
         unsigned char buf[8];
@@ -182,15 +182,15 @@ void loop() {
     getAccelPedalPos(&__pedal);
     int isBrake = digitalRead(BRAKE_PIN);
 
-    Serial.print("Speed : ");
+    Serial.print("/S");
     Serial.print(__speed);
-    Serial.print(" / RPM : ");
+    Serial.print("/R");
     Serial.print(__rpm);
-    Serial.print(" / position : ");
+    Serial.print("/P");
     Serial.print(__pedal);
-    Serial.print(" / Brake : ");
+    Serial.print("/B");
     Serial.println(isBrake);
-    delay(50);
+    // delay(50);
 }
 
 // END FILE
