@@ -20,3 +20,7 @@ Arduino sketch for exporting vehicle telemetry over Serial via the OBD-II CAN bu
 1. Connect the hardware to the vehicle's OBD-II port.
 2. Compile and upload `OBD2_data_export.ino` to the microcontroller.
 3. Open the Serial Monitor at 115200 baud to view the telemetry output.
+
+## Demo Videos
+- [OBD and brake signal test via Arduino IDE Serial Monitor](https://youtu.be/m80BvdzcJ14?si=kJuWkYoUcHwdtPdA)
+- [OBD and brake signal test with Python reading Serial data](https://youtu.be/XU-K6cFl0xY?si=2aGPG9y0yyfWvpPZ)
