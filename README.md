@@ -13,6 +13,7 @@ Arduino sketch for exporting vehicle telemetry over Serial via the OBD-II CAN bu
 
 ## Hardware
 - Requires a board with an MCP2515 CAN controller (e.g., CANBed, CAN Bus Shield).
+- Tested with: [Longan Labs RP2040 CANBed](https://docs.longan-labs.cc/1030003/)
 - Uses `SPI_CS_PIN` to select the CAN controller (default `9`).
 - `BRAKE_PIN` (`A1`) monitors a brake switch.
 
